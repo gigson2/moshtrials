@@ -146,3 +146,48 @@ for (let i = 0; i <= 5; i++) {
 for (let fi = 0; fi <= 5; fi++) {
     if (fi % 2 !== 0) console.log(fi);
 }
+for (let ev = 0; ev <= 10; ev++) {
+    if (ev %2 == 0) console.log(ev);
+}
+//While loop
+// initialExpression
+// while(condition){
+//     incrementExpression
+// }
+let aaa = 1;
+while(aaa < 10) {
+    if(aaa % 2 == 0)console.log(aaa);
+    aaa++;
+}
+//Do-while loop
+let r = 0;
+do {
+if(r%2!==0) console.log(r);
+r++;
+}while(r<12);
+
+//For in loop = use to iterate over properties of an object.
+const py = {
+    ename:'Akwasi',
+    eage: 44
+};
+for(let key in py)console.log(key, py[key]);
+
+//for-of loop = use to iterate over elements of an object/array.
+const colla=['blue','green','yellow'];
+for(let cols of colla)console.log(cols);
+
+//break and continue
+let faa = 0;
+while(faa<=6){
+    if(faa===3)break;
+    console.log(faa);
+    faa++;
+}
+//max of two numbers
+function max(max1,max2) {
+    if(max1>max2)return max1;
+     return max2;
+     
+}
+console.log(max(180,150));
