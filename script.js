@@ -240,8 +240,49 @@ function shownum(limit) {
         if (i % 2 == 0) {
             console.log(i, 'EVEN NUMBER');
         }
-        else{
-            console.log(i,'ODD NUMBER');
+        else {
+            console.log(i, 'ODD NUMBER');
         }
     }
 }
+//truthy and falsey
+const array = [2, null, 'c', 0, 4];
+function countru(array) {
+    let count = 0;
+    for (let value of array) {
+        if (value)
+            count++;
+        return count;
+    }
+}
+console.log(countru(array));
+//function to show string properties
+const movie = {
+    title: 'Moving On',
+    views: 300,
+    producer: 'Ben Afleck',
+    year: 2000,
+    ratings: 8.0,
+    score: 51
+}
+//key is used to find property of an element whether is a string or number or boolean
+function showproperties(obj) {
+    for (let key in obj) {
+        if (typeof obj[key] === 'string') {
+            console.log(key + ' :', obj[key]);
+        }
+    }
+}
+showproperties(movie);
+//sum of multiples od 5 and 3
+function sum(numbs) {
+    let sum = 0;
+    for (let i = 0; i <= numbs; i++) {
+        if (i % 3 === 0 || i % 5 === 0) {
+            sum += i;
+                        
+        }
+        console.log(sum);
+    }
+}
+sum(10);
