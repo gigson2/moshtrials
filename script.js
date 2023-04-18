@@ -147,7 +147,7 @@ for (let fi = 0; fi <= 5; fi++) {
     if (fi % 2 !== 0) console.log(fi);
 }
 for (let ev = 0; ev <= 10; ev++) {
-    if (ev %2 == 0) console.log(ev);
+    if (ev % 2 == 0) console.log(ev);
 }
 //While loop
 // initialExpression
@@ -155,39 +155,93 @@ for (let ev = 0; ev <= 10; ev++) {
 //     incrementExpression
 // }
 let aaa = 1;
-while(aaa < 10) {
-    if(aaa % 2 == 0)console.log(aaa);
+while (aaa < 10) {
+    if (aaa % 2 == 0) console.log(aaa);
     aaa++;
 }
 //Do-while loop
 let r = 0;
 do {
-if(r%2!==0) console.log(r);
-r++;
-}while(r<12);
+    if (r % 2 !== 0) console.log(r);
+    r++;
+} while (r < 12);
 
 //For in loop = use to iterate over properties of an object.
 const py = {
-    ename:'Akwasi',
+    ename: 'Akwasi',
     eage: 44
 };
-for(let key in py)console.log(key, py[key]);
+for (let key in py) console.log(key, py[key]);
 
 //for-of loop = use to iterate over elements of an object/array.
-const colla=['blue','green','yellow'];
-for(let cols of colla)console.log(cols);
+const colla = ['blue', 'green', 'yellow'];
+for (let cols of colla) console.log(cols);
 
 //break and continue
 let faa = 0;
-while(faa<=6){
-    if(faa===3)break;
+while (faa <= 6) {
+    if (faa === 3) break;
     console.log(faa);
     faa++;
 }
 //max of two numbers
-function max(max1,max2) {
-    if(max1>max2)return max1;
-     return max2;
-     
+function max(max1, max2) {
+    if (max1 > max2) return max1;
+    return max2;
+
 }
-console.log(max(180,150));
+console.log(max(180, 150));
+
+function landscape(width, height) {
+    return (width > height);
+}
+console.log(landscape(180, 700));
+
+//FIZZBUSS algorithm
+//divisible by 3 =Fizz
+//divisible by 5 =Buzz
+//divisible by 3 and 5 = FizzBuzz
+
+const output = fizzBuzz(5);
+console.log(output);
+function fizzBuzz(input) {
+    if (typeof input != "number")
+        return NaN;
+    if (input % 3 === 0 && input % 5 === 0)
+        return "FizzBuzz";
+    if (input % 3 === 0)
+        return "Fizz";
+    if (input % 5 === 0)
+        return "Buzz";
+    return input;
+}
+//speed work to check limit below 70 and above to suspend lincense
+
+function checkspeed(speed) {
+    const speedlimit = 70;
+    const pint = 5;
+    if (speed <= speedlimit + pint) {
+        console.log('Ok');
+        return;
+    }
+    const poi = Math.floor((speed - speedlimit) / pint);
+    if (poi >= 12)
+        console.log('Lincense Suspended');
+    else
+        console.log('Point = ', poi);
+
+}
+checkspeed(100);
+
+//Print out odd and even numbers
+shownum(12);
+function shownum(limit) {
+    for (let i = 0; i <= limit; i++) {
+        if (i % 2 == 0) {
+            console.log(i, 'EVEN NUMBER');
+        }
+        else{
+            console.log(i,'ODD NUMBER');
+        }
+    }
+}
